@@ -5,7 +5,6 @@ class User
   field :uid, type: String
   field :name, type: String
   field :email, type: String
-  attr_accessible :provider, :uid, :name, :email
   validates_presence_of :name
   # run 'rake db:mongoid:create_indexes' to create indexes
   index({ email: 1 }, { unique: true, background: true })

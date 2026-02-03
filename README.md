@@ -31,3 +31,7 @@ rails s
 bundle exec rspec
 ```
 
+## 🔭 Future Features <a name="future-features"></a>
+
+-    Update documentaion
+

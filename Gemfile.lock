@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mongoid-rspec/mongoid-rspec.git
+  revision: 662fcf4bb03cf7bc6aa6e52dff42b233198b37c5
+  specs:
+    mongoid-rspec (4.2.0)
+      mongoid (>= 3.0, < 10.0)
+      mongoid-compatibility (>= 0.5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -211,10 +219,9 @@ GEM
       concurrent-ruby (>= 1.0.5, < 2.0)
       mongo (>= 2.18.0, < 3.0.0)
       ruby2_keywords (~> 0.0.5)
-    mongoid-rspec (1.7.0)
-      mongoid (>= 3.0.1)
-      rake
-      rspec (>= 2.9)
+    mongoid-compatibility (1.0.0)
+      activesupport
+      mongoid (>= 2.0)
     multi_test (1.1.0)
     net-imap (0.6.2)
       date
@@ -302,10 +309,6 @@ GEM
     reline (0.6.3)
       io-console (~> 0.5)
     rexml (3.4.4)
-    rspec (3.13.2)
-      rspec-core (~> 3.13.0)
-      rspec-expectations (~> 3.13.0)
-      rspec-mocks (~> 3.13.0)
     rspec-core (3.13.6)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
@@ -379,7 +382,7 @@ DEPENDENCIES
   jsbundling-rails
   launchy
   mongoid (~> 8.0)
-  mongoid-rspec
+  mongoid-rspec!
   oauth (~> 0.5.10)
   omniauth (~> 2.1)
   omniauth-twitter

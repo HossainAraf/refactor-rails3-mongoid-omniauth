@@ -29,7 +29,7 @@ end
 
 group :test do
   gem "database_cleaner-active_record"
-  gem "mongoid-rspec"
+  gem "mongoid-rspec", github: "mongoid-rspec/mongoid-rspec"
   gem "email_spec"
   gem "cucumber-rails", "~> 2.0", require: false
   gem "launchy"

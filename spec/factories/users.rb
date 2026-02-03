@@ -1,9 +1,6 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
-FactoryGirl.define do
+FactoryBot.define do
   factory :user do
-    provider "twitter"
-    uid "12345"
-    name "Bob"
+    name { "Test User" }
+    email { "test@example.com" }
   end
 end

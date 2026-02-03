@@ -1,18 +1,33 @@
-Rails3 Mongoid Omniauth
-========================
+# Rails3 Mongoid Omniauth (Modernized Fork)
 
-This is an example Rails 3 application that combines OmniAuth with Mongoid. It uses the OmniAuth gem to manage authentication using a service provider such as Twitter or Facebook. MongoDB is used as a datastore with the Mongoid gem for quick development without schemas or migrations.
+This fork demonstrates the process of upgrading a legacy Rails 3 + Mongoid + OmniAuth application to Rails 7 + Mongoid 8, with modern security and testing practices.
+Modernization Highlights
 
-________________________
+    - Replaced legacy before_filter callbacks with before_action.
 
-See the README file on GitHub
+    - Removed ActiveRecord railtie and fixtures; app runs purely on Mongoid.
 
-For more information, please see the updated README file on GitHub:
+    - Updated test suite:
 
-https://github.com/railsapps/rails3-mongoid-omniauth
+        - Removed deprecated rspec/autorun.
 
-________________________
+        - Configured DatabaseCleaner for Mongoid.
 
-MIT License
+        - Updated mongoid-rspec to a maintained fork.
 
-http://www.opensource.org/licenses/mit-license
+    - Enforced strong parameters to replace legacy attr_accessible mass assignment protection.
+
+  ## Pitfalls and fixes during migration: 
+  missing jQuery, CoffeeScript removal, asset pipeline issues, Mongoid/ActiveRecord conflicts etc.
+
+## Mapping 'attr_*' to refactor is kept in:
+./docs/refactor-security-strongparams/attr-list.md
+
+## Setup:
+bash
+```
+bundle install
+rails s
+bundle exec rspec
+```
+

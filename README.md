@@ -1,9 +1,7 @@
 # Rails3 Mongoid Omniauth (Modernized Fork)
+ Rails3 Mongoid Omniauth (Security Refactor – Rails 7.2 Prep) This fork modernizes the legacy Rails 3.2.13 Mongoid OmniAuth app with updated security and testing practices, preparing for Rails 7.2.
 
-This fork demonstrates the process of upgrading a legacy Rails 3 + Mongoid + OmniAuth application to Rails 7 + Mongoid 8, with modern security and testing practices.
-Modernization Highlights
-
-    - Replaced legacy before_filter callbacks with before_action.
+    -Replaced legacy before_filter callbacks with before_action.
 
     - Removed ActiveRecord railtie and fixtures; app runs purely on Mongoid.
 
@@ -31,3 +29,11 @@ rails s
 bundle exec rspec
 ```
 
+## 🔭 Future Features <a name="future-features"></a>
+
+-    Update documentaion
+
+## Attribution 
+Original application by **Daniel Kehoe** 
+Copyright © 2012–2013 Daniel Kehoe 
+See [rails3-mongoid-omniauth](https://github.com/RailsApps/rails3-mongoid-omniauth) for the original project.

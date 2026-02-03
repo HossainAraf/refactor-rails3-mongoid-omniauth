@@ -10,6 +10,10 @@ gem "oauth", "~> 0.5.10"
 gem "cssbundling-rails"
 gem "jsbundling-rails"
 gem "sprockets-rails"
+gem "sassc-rails"
+gem "jquery-rails"
+gem "coffee-rails"
+
 
 # Development & Debugging
 group :development do

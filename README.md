@@ -1,39 +1,50 @@
-# Rails3 Mongoid Omniauth (Modernized Fork)
- Rails3 Mongoid Omniauth (Security Refactor – Rails 7.2 Prep) This fork modernizes the legacy Rails 3.2.13 Mongoid OmniAuth app with updated security and testing practices, preparing for Rails 7.2.
+# Rails3 Mongoid OmniAuth — Security Modernization (Rails 7.2–Aligned)
 
-    - Update Gemfile as per rails 7.2 offcial guideline
+This repository is a **modernized fork** of a legacy Rails 3.2.13 Mongoid + OmniAuth application.  
+The goal of this refactor is to apply **modern Rails security, testing, and dependency practices**, preparing the codebase conceptually for Rails 7.2.
 
-    - Remove unnecessary legacy dependencies
-    
-    - Replaced legacy before_filter callbacks with before_action.
+## What was done
 
-    - Removed ActiveRecord railtie and fixtures; app runs purely on Mongoid.
-    
-    - Enforced strong parameters to replace legacy attr_accessible mass assignment protection.
+- Updated Gemfile following Rails 7.x security and dependency guidelines
+- Removed unnecessary legacy dependencies
+- Removed ActiveRecord railtie and fixtures; the app runs purely on Mongoid
+- Replaced legacy `attr_accessible` mass-assignment protection with **strong parameters**
+- Replaced deprecated `before_filter` callbacks with `before_action`
+- Replaced deprecated `skip_before_filter` callbacks with `skip_before_action`
+- Updated the test suite
+<!-- :
+  - Removed deprecated `rspec/autorun`
+  - Configured `DatabaseCleaner` for Mongoid
+  - Updated `mongoid-rspec` to a maintained fork
+-->
+## Migration pitfalls encountered
 
-    - Updated test suite:
+- Missing jQuery after CoffeeScript removal
+- Asset pipeline issues
+- Mongoid vs ActiveRecord configuration conflicts
 
-        - Removed deprecated rspec/autorun.
+These issues were identified and resolved incrementally during the refactor.
 
-        - Configured DatabaseCleaner for Mongoid.
+## Security refactor notes
 
-        - Updated mongoid-rspec to a maintained fork.
+A mapping of legacy `attr_*` usage to strong parameters is documented here:
 
-
-  ## Pitfalls and fixes during migration: 
-  missing jQuery, CoffeeScript removal, asset pipeline issues, Mongoid/ActiveRecord conflicts etc.
-
-## Mapping 'attr_*' to refactor is kept in:
 ./docs/refactor-security-strongparams/attr-list.md
 
-## Setup:
-bash
-```
+
+## Setup
+
+```bash
 bundle install
 rails s
 bundle exec rspec
-```
 
+Future work
+
+    Documentation cleanup
+
+    Further alignment with Rails 7.2 conventions
+```
 ## 🔭 Future Features <a name="future-features"></a>
 
 -    Update documentaion

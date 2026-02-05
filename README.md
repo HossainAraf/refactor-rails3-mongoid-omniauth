@@ -1,9 +1,15 @@
 # Rails3 Mongoid Omniauth (Modernized Fork)
  Rails3 Mongoid Omniauth (Security Refactor – Rails 7.2 Prep) This fork modernizes the legacy Rails 3.2.13 Mongoid OmniAuth app with updated security and testing practices, preparing for Rails 7.2.
 
-    -Replaced legacy before_filter callbacks with before_action.
+    - Update Gemfile as per rails 7.2 offcial guideline
+
+    - Remove unnecessary legacy dependencies
+    
+    - Replaced legacy before_filter callbacks with before_action.
 
     - Removed ActiveRecord railtie and fixtures; app runs purely on Mongoid.
+    
+    - Enforced strong parameters to replace legacy attr_accessible mass assignment protection.
 
     - Updated test suite:
 
@@ -13,7 +19,6 @@
 
         - Updated mongoid-rspec to a maintained fork.
 
-    - Enforced strong parameters to replace legacy attr_accessible mass assignment protection.
 
   ## Pitfalls and fixes during migration: 
   missing jQuery, CoffeeScript removal, asset pipeline issues, Mongoid/ActiveRecord conflicts etc.

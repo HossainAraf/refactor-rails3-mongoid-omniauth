@@ -53,3 +53,4 @@ Future work
 Original application by **Daniel Kehoe** 
 Copyright © 2012–2013 Daniel Kehoe 
 See [rails3-mongoid-omniauth](https://github.com/RailsApps/rails3-mongoid-omniauth) for the original project.
+

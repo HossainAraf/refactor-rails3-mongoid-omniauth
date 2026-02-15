@@ -19,7 +19,6 @@ The goal of this refactor is to apply **modern Rails security, testing, and depe
 -->
 ## Migration pitfalls encountered
 
-- Missing jQuery after CoffeeScript removal
 - Asset pipeline issues
 - Mongoid vs ActiveRecord configuration conflicts
 

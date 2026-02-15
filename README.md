@@ -11,7 +11,7 @@ The goal of this refactor is to apply **modern Rails security, testing, and depe
 - Replaced legacy `attr_accessible` mass-assignment protection with **strong parameters**
 - Replaced deprecated `before_filter` callbacks with `before_action`
 - Replaced deprecated `skip_before_filter` callbacks with `skip_before_action`
-- Updated the test suite
+- Updated the test suite (In progress)
 <!-- :
   - Removed deprecated `rspec/autorun`
   - Configured `DatabaseCleaner` for Mongoid
